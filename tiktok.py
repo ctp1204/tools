@@ -62,7 +62,7 @@ class OOP:
                                 self.delay(seconds)
                             self.follow(link_value)
                             self.demNV += 1
-
+                            print(f'[{self.STT}.{self.demNV}] | FOLLOW |', end='\r')
                             if self.demNV == 9:
                                 self.nhanXu()
                         
@@ -117,7 +117,6 @@ class OOP:
         
     def delay(self, seconds):
         for i in range(seconds, 0, -1):
-            print(f'[{self.STT}][{self.demNV}] | FOLLOW |')
             print(f'Vui lòng đợi sau -> {str(i)} giây', end='\r')
             time.sleep(1)
     def nghiChongBlock(self, chongBlock):
