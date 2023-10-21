@@ -62,7 +62,7 @@ class OOP:
                                 self.delay(seconds)
                             self.follow(link_value)
                             self.demNV += 1
-                            if self.demNV <= countNV:
+                            if self.demNV == countNV:
                                 self.nhanXu()
                         
                                 self.demNV = 0
