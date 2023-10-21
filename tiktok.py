@@ -63,7 +63,7 @@ class OOP:
                             self.follow(link_value)
                             self.demNV += 1
 
-                            print(f"[{self.STT}.{self.demNV}][CTP1204] | {now.strftime('%H:%M:%S')} | FOLLOW |")
+                            print('xxxxx')
                             if self.demNV == 9:
                                 self.nhanXu()
                         
