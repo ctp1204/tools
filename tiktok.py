@@ -105,10 +105,10 @@ class OOP:
                     job_success = dataNX['data']['job_success']
                     xuthem = dataNX['data']['xu_them']
                     msg = dataNX['data']['msg']
-                    totalXu += xuthem
+                    self.totalXu += xuthem
                     
                     self.STT+= 1
-                    print(f"[{self.STT}][CTP1204] | {now.strftime('%H:%M:%S')} | JOBS : {job_success} | {msg} | JOBS XU: {totalXu} XU | TOTAL XU : {xu} XU")
+                    print(f"[{self.STT}][CTP1204] | {now.strftime('%H:%M:%S')} | JOBS : {job_success} | {msg} | JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU")
                 else:
                     print("Nhan xu that bai")
             else:
