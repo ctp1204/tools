@@ -4,6 +4,7 @@ class OOP:
     def __init__(self, TDS_token, idtiktok):
         self.TDS_token = TDS_token
         self.idtiktok = idtiktok
+        self.totalXu = 0
         self.demNV = 0
         self.xuHienTai = 0
         self.STT = 0
@@ -102,11 +103,12 @@ class OOP:
                 if 'data' in dataNX:
                     xu = dataNX['data']['xu']
                     job_success = dataNX['data']['job_success']
-                    # xuthem = dataNX['data']['xu_them']
+                    xuthem = dataNX['data']['xu_them']
                     msg = dataNX['data']['msg']
+                    totalXu += xuthem
                     
                     self.STT+= 1
-                    print(f"[{self.STT}] | {now.strftime('%H:%M:%S')} | Done Jobs : {job_success} | CTP1204 TOOL | {msg} | Xu hiện tại : {xu}")
+                    print(f"[{self.STT}][CTP1204] | {now.strftime('%H:%M:%S')} | JOBS : {job_success} | {msg} | JOBS XU: {totalXu} XU | TOTAL XU : {xu} XU")
                 else:
                     print("Nhan xu that bai")
             else:
