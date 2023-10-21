@@ -62,7 +62,7 @@ class OOP:
                                 self.delay(seconds)
                             self.follow(link_value)
                             self.demNV += 1
-                            print(f'[{self.STT + 1}.{self.demNV}] | CTP1204_TOOL | FOLLOW')
+                            print(f'[{self.STT}.{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW')
                             if self.demNV == 9:
                                 self.nhanXu()
                         
@@ -109,7 +109,7 @@ class OOP:
                     self.totalXu += xuthem
                     
                     self.STT+= 1
-                    print(f"[{self.STT}][CTP1204] | {now.strftime('%H:%M:%S')} | JOBS : {job_success} | {msg} | JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU")
+                    print(f"[{self.STT}] | {now.strftime('%H:%M:%S')} | JOBS : {job_success} | {msg} | JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU")
                 else:
                     print("Nhan xu that bai")
             else:
