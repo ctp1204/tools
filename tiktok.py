@@ -62,7 +62,7 @@ class OOP:
                                 self.delay(seconds)
                             self.follow(link_value)
                             self.demNV += 1
-                            print(f'[{self.STT}.{self.demNV}] | CTP1204_TOOL | FOLLOW')
+                            print(f'[{self.STT + 1}.{self.demNV}] | CTP1204_TOOL | FOLLOW')
                             if self.demNV == 9:
                                 self.nhanXu()
                         
