@@ -7,7 +7,6 @@ class OOP:
         self.demNV = 0
         self.xuHienTai = 0
         self.STT = 0
-        self.totalJobs = 0
         self.s = requests.Session()
     def layThongTinAcc(self):
         url = 'https://traodoisub.com/api/?fields=profile&access_token={0}'.format(self.TDS_token)
@@ -105,10 +104,9 @@ class OOP:
                     job_success = dataNX['data']['job_success']
                     # xuthem = dataNX['data']['xu_them']
                     msg = dataNX['data']['msg']
-                    totalJobs += job_success
-
+                    
                     self.STT+= 1
-                    print(f"[{self.STT}] | {now.strftime('%H:%M:%S')} | Done jobs: {job_success} | Total jobs: {totalJobs} | CTP1204 TOOL | {msg} | Xu hiện tại : {xu}")
+                    print(f"[{self.STT}] | {now.strftime('%H:%M:%S')} | Done Jobs : {job_success} | CTP1204 TOOL | {msg} | Xu hiện tại : {xu}")
                 else:
                     print("Nhan xu that bai")
             else:
