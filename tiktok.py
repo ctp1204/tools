@@ -62,7 +62,6 @@ class OOP:
                                 self.delay(seconds)
                             self.follow(link_value)
                             self.demNV += 1
-                            print(f'Dem NV {demNV}')
                             if self.demNV == 9:
                                 self.nhanXu()
                         
@@ -106,10 +105,10 @@ class OOP:
                     job_success = dataNX['data']['job_success']
                     # xuthem = dataNX['data']['xu_them']
                     msg = dataNX['data']['msg']
-                    total_jobs = totalJobs + job_success
-                    
+                    totalJobs += job_success
+
                     self.STT+= 1
-                    print(f"[{self.STT}] | {now.strftime('%H:%M:%S')} | Done jobs: {job_success} | Total jobs: {total_jobs} | CTP1204 TOOL | {msg} | Xu hiện tại : {xu}")
+                    print(f"[{self.STT}] | {now.strftime('%H:%M:%S')} | Done jobs: {job_success} | Total jobs: {totalJobs} | CTP1204 TOOL | {msg} | Xu hiện tại : {xu}")
                 else:
                     print("Nhan xu that bai")
             else:
