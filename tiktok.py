@@ -39,6 +39,7 @@ class OOP:
             time.sleep(10)
             url = 'https://traodoisub.com/api/?fields=tiktok_follow&access_token={}'.format(self.TDS_token)
             response = self.s.get(url)
+            now = datetime.datetime.now()
             try:
                 data = json.loads(response.text)
                 if 'countdown' in data:
