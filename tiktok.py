@@ -62,7 +62,7 @@ class OOP:
                                 self.delay(seconds)
                             self.follow(link_value)
                             self.demNV += 1
-                            if self.demNV == countNV:
+                            if self.demNV == 9:
                                 self.nhanXu()
                         
                                 self.demNV = 0
@@ -154,7 +154,6 @@ else:
 seconds = int(input('Nhập delay : '))
 answer = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
 chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
-countNV = int(input('Muốn làm bao nhiêu nhiệm vụ : '))
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
 # TDS_token = 'TDSQfikjclZXZzJiOiIXZ2V2ciwiIxETMxgmbhhGdpFGZiojIyV2c1Jye'
 # idtiktok = '7170579645727867931'
