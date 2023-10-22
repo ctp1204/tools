@@ -8,7 +8,7 @@ class OOP:
         self.totalJobs = 0
         self.demNV = 0
         self.xuHienTai = 0
-        self.flagChongBlock = false
+        self.flagChongBlock = False
         self.STT = 0
         self.s = requests.Session()
     def layThongTinAcc(self):
@@ -63,11 +63,11 @@ class OOP:
                             now = datetime.datetime.now()
                             self.guiNhiemVu(id_value)
                             if (self.STT == answer):
-                                self.flagChongBlock = true
+                                self.flagChongBlock = True
 
                             if (self.STT == answer and self.flagChongBlock):
                                 self.nghiChongBlock(chongBlock)
-                                self.flagChongBlock = false
+                                self.flagChongBlock = False
                             else:
                                 time.sleep(2)
                                 self.demNV += 1
