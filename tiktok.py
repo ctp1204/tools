@@ -39,7 +39,6 @@ class OOP:
             time.sleep(10)
             url = 'https://traodoisub.com/api/?fields=tiktok_follow&access_token={}'.format(self.TDS_token)
             response = self.s.get(url)
-            now = datetime.datetime.now()
             try:
                 data = json.loads(response.text)
                 if 'countdown' in data:
@@ -56,6 +55,7 @@ class OOP:
                         for item in data['data']:
                             link_value = item['link']
                             id_value = item['id']
+                            now = datetime.datetime.now()
                             self.guiNhiemVu(id_value)
                             if (self.STT == answer):
                                 self.nghiChongBlock(chongBlock)
