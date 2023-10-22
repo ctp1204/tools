@@ -167,7 +167,14 @@ def getInfoAccount():
         return user
             # print(f'User : {user} | Xu : {xu} | Xu die : {xudie}')
 
-bannerTool()
+
+print('======================================================')
+print('[*] => Tên Tool: CTP1204_TOOL')
+print('[*] => Admin: Cường TânPhú')
+print('[*] => Zalo: 0935 53 53 25')
+print('======================================================')
+print('Chúc bạn cày thật nhiều xu !!!')
+print('======================================================')
 
 if TDS_token is None or idtiktok is None:
     TDS_token = input('Nhập token TDS : ')
@@ -194,14 +201,6 @@ countNV = int(input('Bạn muốn chạy bao nhiêu nhiệm vụ thì nhận xu 
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
 # TDS_token = 'TDSQfikjclZXZzJiOiIXZ2V2ciwiIxETMxgmbhhGdpFGZiojIyV2c1Jye'
 # idtiktok = '7170579645727867931'
-def bannerTool():
-    print('======================================================')
-    print('[*] => Tên Tool: CTP1204_TOOL')
-    print('[*] => Admin: Cường TânPhú')
-    print('[*] => Zalo: 0935 53 53 25')
-    print('======================================================')
-    print('Chúc bạn cày thật nhiều xu !!!')
-    print('======================================================')
 api = OOP(TDS_token, idtiktok)
 api.datCauHinh()
 api.layThongTinAcc()
