@@ -53,7 +53,7 @@ class OOP:
                     print('Đổi tiktok mới, bị giới hạn nhiệm vụ rồi')
                     exit()
                 else:
-                    print(f'Đã lấy được {len(data['data'])} jobs. Bắt đầu tiến hành làm jobs nào !!!', end='\r')
+                    print(f"Đã lấy được {len(data['data'])} jobs. Bắt đầu tiến hành làm jobs nào !!!", end='\r')
                     time.sleep(2)
                     try:
                         for item in data['data']:
