@@ -158,12 +158,13 @@ def getInfoAccount():
             # print(f'User : {user} | Xu : {xu} | Xu die : {xudie}')
 
 
-print('CTP1204_TOOL')
-print('=========================================')
-print('[O] => Admin: Cường Tân Phú')
-print('[O] => Zalo: 0935 53 53 25')
-print('=========================================')
+print('======================================================')
+print('[*] => Tên Tool: CTP1204_TOOL')
+print('[*] => Admin: Cường TânPhú')
+print('[*] => Zalo: 0935 53 53 25')
+print('======================================================')
 print('Chúc bạn cày thật nhiều xu !!!')
+print('======================================================')
 
 if TDS_token is None or idtiktok is None:
     TDS_token = input('Nhập token TDS : ')
