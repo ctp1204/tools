@@ -62,15 +62,21 @@ class OOP:
                                 self.nghiChongBlock(chongBlock)
                             else:
                                 self.delay(seconds)
-                            self.follow(link_value)
                             self.demNV += 1
-                            print(f"[{self.STT}.{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
-                            if self.demNV == 9:
+                            self.follow(link_value, now)
+                            # print(f"[{self.STT}.{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
+                            if self.demNV % 10:
                                 self.nhanXu()
-                        
+
                                 self.demNV = 0
                                 time.sleep(10)
                                 continue
+                            # if self.demNV == 9:
+                            #     self.nhanXu()
+                        
+                            #     self.demNV = 0
+                            #     time.sleep(10)
+                            #     continue
                     except Exception:
                         pass
                         # for i in range(len(arr_link_value)):
@@ -94,8 +100,9 @@ class OOP:
         #         self.nhanXu()
         #         self.demNV = 0
         #         continue
-    def follow(self, link_value):
+    def follow(self, link_value, now):
        os.system(f'termux-open-url {link_value}')
+       print(f"[{self.STT}.{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
     def nhanXu(self):
      
             now = datetime.datetime.now()
