@@ -140,16 +140,33 @@ def load_account_info():
     except FileNotFoundError:
         return None, None
 TDS_token, idtiktok = load_account_info()
+
+def getInfoAccount();
+        s = requests.Session()
+        url = 'https://traodoisub.com/api/?fields=profile&access_token={0}'.format(TDS_token)
+        response = s.get(url)
+        dataLTT =  json.loads(response.text)
+        if('error' in dataLTT):
+            print('Token tds die !!!')
+            exit()
+        else:
+            user = dataLTT['data']['user']
+        
+        return user
+            # print(f'User : {user} | Xu : {xu} | Xu die : {xudie}')
+
+
 if TDS_token is None or idtiktok is None:
     TDS_token = input('Nhập token TDS : ')
     idtiktok = input('Nhập id tiktok cần cấu hình : ')
     save_account_info(TDS_token, idtiktok)
 else:
-    keep_old_token = input('Bạn có muốn giữ lại token TDS cũ không? (y/n): ')
+    user = getInfoAccount()
+    keep_old_token = input('Bạn có muốn giữ lại token TDS ({user}) cũ không? (y/n): ')
     if keep_old_token.lower() != 'y':
         TDS_token = input('Nhập token TDS mới: ')
 
-    keep_old_idtiktok = input('Bạn có muốn giữ lại id tiktok cũ không? (y/n): ')
+    keep_old_idtiktok = input('Bạn có muốn giữ lại id tiktok ({idtiktok}) cũ không? (y/n): ')
     if keep_old_idtiktok.lower() != 'y':
         idtiktok = input('Nhập id tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
@@ -162,3 +179,4 @@ chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
 api = OOP(TDS_token, idtiktok)
 api.datCauHinh()
 api.layNhiemVu()
+api.layThongTinAcc()
