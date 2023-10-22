@@ -61,6 +61,7 @@ class OOP:
                             # if (self.STT == answer):
                             #     self.nghiChongBlock(chongBlock)
                             # else:
+                            time.sleep(5)
                             self.demNV += 1
                             self.follow(link_value, now)
                             self.delay(seconds)
