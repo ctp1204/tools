@@ -8,7 +8,6 @@ class OOP:
         self.totalJobs = 0
         self.demNV = 0
         self.xuHienTai = 0
-        self.flagChongBlock = False
         self.STT = 0
         self.s = requests.Session()
     def layThongTinAcc(self):
@@ -54,31 +53,27 @@ class OOP:
                     print('Đổi tiktok mới, bị giới hạn nhiệm vụ rồi')
                     exit()
                 else:
-                    # print(f"Đã lấy được {len(data['data'])} jobs. Làm jobs nào.", end='\r')
-                    # time.sleep(2)
                     try:
+                        print(f"Đã lấy được {len(data['data'])} jobs. Làm jobs nào.", end='\r')
+                        time.sleep(2)
                         for item in data['data']:
                             link_value = item['link']
                             id_value = item['id']
                             now = datetime.datetime.now()
                             self.guiNhiemVu(id_value)
                             if (self.STT == answer):
-                                self.flagChongBlock = True
-
-                            if (self.STT == answer and self.flagChongBlock):
                                 self.nghiChongBlock(chongBlock)
-                                self.flagChongBlock = False
                             else:
                                 time.sleep(2)
-                                self.demNV += 1
-                                self.follow(link_value, now)
-                                self.delay(seconds)
-                                if self.demNV % countNV == 0:
-                                    self.nhanXu()
+                            self.demNV += 1
+                            self.follow(link_value, now)
+                            self.delay(seconds)
+                            if self.demNV % countNV == 0:
+                                self.nhanXu()
 
-                                    self.demNV = 0
-                                    time.sleep(10)
-                                    continue
+                                self.demNV = 0
+                                time.sleep(10)
+                                continue
                             # if self.demNV == 9:
                             #     self.nhanXu()
                         
