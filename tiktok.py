@@ -120,7 +120,7 @@ class OOP:
         
     def delay(self, seconds):
         for i in range(seconds, 0, -1):
-            print(f'[CTP1204_TOOL][{str(i)}]', end='\r')
+            print(f'[CTP1204_TOOL][{str(i)}', end='\r')
             time.sleep(1)
     def nghiChongBlock(self, chongBlock):
         for i in range(chongBlock, 0, -1):
@@ -164,12 +164,14 @@ if TDS_token is None or idtiktok is None:
     save_account_info(TDS_token, idtiktok)
 else:
     user = getInfoAccount()
-    keep_old_token = input(f'Bạn có muốn giữ lại token TDS ({user}) cũ không? (y/n): ')
-    if keep_old_token.lower() != 'y':
+    keep_old_token = input(f'1. Giữ tài khoản TDS củ: ({user})')
+    new_token = input(f'2. Bạn có muốn đổi tài khoản TDS mới không ?')
+    if new_token.lower() == '2':
         TDS_token = input('Nhập token TDS mới: ')
 
-    keep_old_idtiktok = input(f'Bạn có muốn giữ lại id tiktok ({idtiktok}) cũ không? (y/n): ')
-    if keep_old_idtiktok.lower() != 'y':
+    keep_old_tiktok = input(f'1. Giữ tài khoản tiktok củ: ({idtiktok})')
+    new_idtiktok = input(f'2. Bạn có muôn đối tài khoản tiktok mới không ?')
+    if new_idtiktok.lower() == '2':
         idtiktok = input('Nhập id tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
 seconds = int(input('Nhập delay : '))
@@ -180,5 +182,5 @@ chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
 # idtiktok = '7170579645727867931'
 api = OOP(TDS_token, idtiktok)
 api.datCauHinh()
-api.layNhiemVu()
 api.layThongTinAcc()
+api.layNhiemVu()
