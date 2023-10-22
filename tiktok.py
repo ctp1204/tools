@@ -37,6 +37,7 @@ class OOP:
             print(f'{id} | {user} | {msg}')
     def layNhiemVu(self):
         while(True):
+            print('Đang lấy jobs, vui lòng chờ !!!', end='\r')
             time.sleep(10)
             url = 'https://traodoisub.com/api/?fields=tiktok_follow&access_token={}'.format(self.TDS_token)
             response = self.s.get(url)
@@ -61,7 +62,7 @@ class OOP:
                             # if (self.STT == answer):
                             #     self.nghiChongBlock(chongBlock)
                             # else:
-                            time.sleep(5)
+                            time.sleep(2)
                             self.demNV += 1
                             self.follow(link_value, now)
                             self.delay(seconds)
