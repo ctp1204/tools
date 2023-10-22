@@ -164,11 +164,11 @@ if TDS_token is None or idtiktok is None:
     save_account_info(TDS_token, idtiktok)
 else:
     user = getInfoAccount()
-    keep_old_token = input('Bạn có muốn giữ lại token TDS ({user}) cũ không? (y/n): ')
+    keep_old_token = input(f'Bạn có muốn giữ lại token TDS ({user}) cũ không? (y/n): ')
     if keep_old_token.lower() != 'y':
         TDS_token = input('Nhập token TDS mới: ')
 
-    keep_old_idtiktok = input('Bạn có muốn giữ lại id tiktok ({idtiktok}) cũ không? (y/n): ')
+    keep_old_idtiktok = input(f'Bạn có muốn giữ lại id tiktok ({idtiktok}) cũ không? (y/n): ')
     if keep_old_idtiktok.lower() != 'y':
         idtiktok = input('Nhập id tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
