@@ -143,7 +143,7 @@ def load_account_info():
         return None, None
 TDS_token, idtiktok = load_account_info()
 
-def getInfoAccount();
+def getInfoAccount():
         s = requests.Session()
         url = 'https://traodoisub.com/api/?fields=profile&access_token={0}'.format(TDS_token)
         response = s.get(url)
