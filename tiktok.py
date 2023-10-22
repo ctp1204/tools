@@ -62,7 +62,7 @@ class OOP:
                             id_value = item['id']
                             now = datetime.datetime.now()
                             self.guiNhiemVu(id_value)
-                            if (self.STT == answer)
+                            if (self.STT == answer):
                                 self.flagChongBlock = true
 
                             if (self.STT == answer and self.flagChongBlock):
