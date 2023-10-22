@@ -5,6 +5,7 @@ class OOP:
         self.TDS_token = TDS_token
         self.idtiktok = idtiktok
         self.totalXu = 0
+        self.totalJobs = 0
         self.demNV = 0
         self.xuHienTai = 0
         self.STT = 0
@@ -108,9 +109,10 @@ class OOP:
                     xuthem = dataNX['data']['xu_them']
                     msg = dataNX['data']['msg']
                     self.totalXu += xuthem
+                    self.totalJobs += job_success
                     
                     self.STT+= 1
-                    print(f"[{self.STT}] | {now.strftime('%H:%M:%S')} | JOBS : {job_success} | {msg} | JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU")
+                    print(f"[{self.STT}] | JOBS : {job_success} | {msg} | TOTAL JOBS: {self.totalJobs} | JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU")
                 else:
                     print("Nhan xu that bai")
             else:
@@ -118,7 +120,7 @@ class OOP:
         
     def delay(self, seconds):
         for i in range(seconds, 0, -1):
-            print(f'Vui lòng đợi sau -> {str(i)} giây', end='\r')
+            print(f'[CTP1204_TOOL][{str(i)}]', end='\r')
             time.sleep(1)
     def nghiChongBlock(self, chongBlock):
         for i in range(chongBlock, 0, -1):
