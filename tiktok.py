@@ -64,7 +64,7 @@ class OOP:
                             self.demNV += 1
                             self.follow(link_value, now)
                             self.delay(seconds)
-                            if self.demNV % 10 == 0:
+                            if self.demNV % countNV == 0:
                                 self.nhanXu()
 
                                 self.demNV = 0
@@ -101,7 +101,7 @@ class OOP:
         #         continue
     def follow(self, link_value, now):
        os.system(f'termux-open-url {link_value}')
-       print(f"{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
+       print(f"[{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
     def nhanXu(self):
      
             now = datetime.datetime.now()
@@ -191,8 +191,9 @@ else:
         idtiktok = input('2.1 Nhập id Tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
 seconds = int(input('Nhập delay : '))
-answer = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
-chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
+# answer = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
+# chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
+countNV = int(input('Bạn muốn chạy bao nhiêu nhiệm vụ thì nhận xu : '))
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
 # TDS_token = 'TDSQfikjclZXZzJiOiIXZ2V2ciwiIxETMxgmbhhGdpFGZiojIyV2c1Jye'
 # idtiktok = '7170579645727867931'
