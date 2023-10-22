@@ -120,7 +120,7 @@ class OOP:
         
     def delay(self, seconds):
         for i in range(seconds, 0, -1):
-            print(f'[CTP1204_TOOL][{str(i)}', end='\r')
+            print(f'[CTP1204_TOOL] ~> {str(i)} giây', end='\r')
             time.sleep(1)
     def nghiChongBlock(self, chongBlock):
         for i in range(chongBlock, 0, -1):
