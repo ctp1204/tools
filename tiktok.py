@@ -65,7 +65,7 @@ class OOP:
                             self.demNV += 1
                             self.follow(link_value, now)
                             # print(f"[{self.STT}.{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
-                            if self.demNV % 10:
+                            if self.demNV % 10 == 0:
                                 self.nhanXu()
 
                                 self.demNV = 0
