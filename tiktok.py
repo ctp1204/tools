@@ -23,6 +23,8 @@ class OOP:
             xudie = dataLTT['data']['xudie']
             self.xuHienTai += int(xu)
             print(f'User : {user} | Xu : {xu} | Xu die : {xudie}')
+            print('======================================================')
+
     def datCauHinh(self):
         url = 'https://traodoisub.com/api/?fields=tiktok_run&id={0}&access_token={1}'.format(self.idtiktok, self.TDS_token)
         response = self.s.get(url)
@@ -61,10 +63,10 @@ class OOP:
                             id_value = item['id']
                             now = datetime.datetime.now()
                             self.guiNhiemVu(id_value)
-                            if (self.STT == answer):
-                                self.nghiChongBlock(chongBlock)
-                            else:
-                                time.sleep(2)
+                            # if (self.STT == answer):
+                            #     self.nghiChongBlock(chongBlock)
+                            # else:
+                            time.sleep(2)
                             self.demNV += 1
                             self.follow(link_value, now)
                             self.delay(seconds)
@@ -195,8 +197,8 @@ else:
         idtiktok = input('2.1 Nhập id Tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
 seconds = int(input('Nhập delay : '))
-answer = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
-chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
+# answer = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
+# chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
 countNV = int(input('Bạn muốn chạy bao nhiêu nhiệm vụ thì nhận xu : '))
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
 # TDS_token = 'TDSQfikjclZXZzJiOiIXZ2V2ciwiIxETMxgmbhhGdpFGZiojIyV2c1Jye'
