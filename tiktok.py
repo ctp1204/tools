@@ -64,16 +64,15 @@ class OOP:
                             if (self.STT == answer):
                                 self.nghiChongBlock(chongBlock)
                             else:
-                                time.sleep(2)
-                                self.demNV += 1
-                                self.follow(link_value, now)
                                 self.delay(seconds)
-                                if self.demNV % countNV == 0:
-                                    self.nhanXu()
+                            self.follow(link_value, now)
+                            self.demNV += 1
+                            if self.demNV % countNV == 0:
+                                self.nhanXu()
 
-                                    self.demNV = 0
-                                    time.sleep(10)
-                                    continue
+                                self.demNV = 0
+                                time.sleep(10)
+                                continue
                             # if self.demNV == 9:
                             #     self.nhanXu()
                         
