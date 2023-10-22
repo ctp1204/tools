@@ -58,13 +58,12 @@ class OOP:
                             id_value = item['id']
                             now = datetime.datetime.now()
                             self.guiNhiemVu(id_value)
-                            if (self.STT == answer):
-                                self.nghiChongBlock(chongBlock)
-                            else:
-                                self.delay(seconds)
+                            # if (self.STT == answer):
+                            #     self.nghiChongBlock(chongBlock)
+                            # else:
                             self.demNV += 1
                             self.follow(link_value, now)
-                            # print(f"[{self.STT}.{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
+                            self.delay(seconds)
                             if self.demNV % 10 == 0:
                                 self.nhanXu()
 
@@ -102,7 +101,7 @@ class OOP:
         #         continue
     def follow(self, link_value, now):
        os.system(f'termux-open-url {link_value}')
-       print(f"[{self.STT}.{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
+       print(f"{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
     def nhanXu(self):
      
             now = datetime.datetime.now()
