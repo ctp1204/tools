@@ -158,6 +158,13 @@ def getInfoAccount():
             # print(f'User : {user} | Xu : {xu} | Xu die : {xudie}')
 
 
+print('CTP1204_TOOL')
+print('=========================================')
+print('[O] => Admin: Cường Tân Phú')
+print('[O] => Zalo: 0935 53 53 25')
+print('=========================================')
+print('Chúc bạn cày thật nhiều xu !!!')
+
 if TDS_token is None or idtiktok is None:
     TDS_token = input('Nhập token TDS : ')
     idtiktok = input('Nhập id tiktok cần cấu hình : ')
@@ -165,14 +172,16 @@ if TDS_token is None or idtiktok is None:
 else:
     user = getInfoAccount()
     print(f'1. Giữ tài khoản TDS củ: ({user})')
-    new_token = input(f'2. Bạn có muốn đổi tài khoản TDS mới không ? : ')
-    if new_token.lower() == '2':
-        TDS_token = input('Nhập token TDS mới: ')
+    print(f'2. Bạn có muốn đổi tài khoản TDS mới không ?')
+    keep_old_or_new_token_tds = input(f'Nhập số : ')
+    if keep_old_or_new_token_tds.lower() == '2':
+        TDS_token = input('1.1 Nhập token TDS mới: ')
 
-    print(f'1. Giữ tài khoản tiktok củ: ({idtiktok})')
-    new_idtiktok = input(f'2. Bạn có muôn đối tài khoản tiktok mới không ? : ')
-    if new_idtiktok.lower() == '2':
-        idtiktok = input('Nhập id tiktok mới: ')
+    print(f'1. Giữ tài khoản Tiktok củ: ({idtiktok})')
+    print(f'2. Bạn có muôn đối tài khoản Tiktok mới không ?')
+    keep_or_new_idtiktok = input(f'Nhập số : ')
+    if keep_or_new_idtiktok.lower() == '2':
+        idtiktok = input('2.1 Nhập id Tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
 seconds = int(input('Nhập delay : '))
 answer = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
