@@ -53,7 +53,7 @@ class OOP:
                     print('Đổi tiktok mới, bị giới hạn nhiệm vụ rồi')
                     exit()
                 else:
-                    print(f"Đã lấy được {len(data['data'])} jobs. Bắt đầu tiến hành làm jobs nào !!!", end='\r')
+                    print(f"Đã lấy được {len(data['data'])} jobs. Làm jobs nào.", end='\r')
                     time.sleep(2)
                     try:
                         for item in data['data']:
@@ -61,19 +61,19 @@ class OOP:
                             id_value = item['id']
                             now = datetime.datetime.now()
                             self.guiNhiemVu(id_value)
-                            # if (self.STT == answer):
-                            #     self.nghiChongBlock(chongBlock)
-                            # else:
-                            time.sleep(2)
-                            self.demNV += 1
-                            self.follow(link_value, now)
-                            self.delay(seconds)
-                            if self.demNV % countNV == 0:
-                                self.nhanXu()
+                            if (self.STT == answer):
+                                self.nghiChongBlock(chongBlock)
+                            else:
+                                time.sleep(2)
+                                self.demNV += 1
+                                self.follow(link_value, now)
+                                self.delay(seconds)
+                                if self.demNV % countNV == 0:
+                                    self.nhanXu()
 
-                                self.demNV = 0
-                                time.sleep(10)
-                                continue
+                                    self.demNV = 0
+                                    time.sleep(10)
+                                    continue
                             # if self.demNV == 9:
                             #     self.nhanXu()
                         
@@ -195,8 +195,8 @@ else:
         idtiktok = input('2.1 Nhập id Tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
 seconds = int(input('Nhập delay : '))
-# answer = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
-# chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
+answer = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
+chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
 countNV = int(input('Bạn muốn chạy bao nhiêu nhiệm vụ thì nhận xu : '))
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
 # TDS_token = 'TDSQfikjclZXZzJiOiIXZ2V2ciwiIxETMxgmbhhGdpFGZiojIyV2c1Jye'
