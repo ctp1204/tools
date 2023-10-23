@@ -76,22 +76,8 @@ class OOP:
                                 self.demNV = 0
                                 time.sleep(10)
                                 continue
-                            # if self.demNV == 9:
-                            #     self.nhanXu()
-
-                            #     self.demNV = 0
-                            #     time.sleep(10)
-                            #     continue
                     except Exception:
                         pass
-                        # for i in range(len(arr_link_value)):
-                        #     link_value = arr_link_value[i]
-                        #     print(link_value)
-                            # id_value = arr_id_value[i]
-                            # self.guiNhiemVu(id_value)
-                            # time.sleep(5)
-                            # self.follow(link_value)
-
             except json.JSONDecodeError:
                pass
     def guiNhiemVu(self, id_value):
@@ -125,8 +111,14 @@ class OOP:
 
                     self.STT+= 1
                     print('======================================================')
-                    print(f"[{self.STT}] | JOBS SUCCESS : {job_success} | {msg} | TOTAL JOBS: {self.totalJobs}")
-                    print(f"===> JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU <===")
+                    if (job_success == 0):
+                        print('Tài khoản của bạn đã bị nhả jobs hoặc bị chặn Follow.')
+                        print('Tool sẽ tự động dừng. Bạn vui lòng đổi nick để chạy lại.')
+                        print('Chúc bạn một ngày vui và kiếm thật nhiều XU')
+                        exit()
+                    else:
+                        print(f"[{self.STT}] | JOBS SUCCESS : {job_success} | {msg} | TOTAL JOBS: {self.totalJobs}")
+                        print(f"===> JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU <===")
                     print('======================================================')
                 else:
                     print("Nhan xu that bai")
@@ -169,7 +161,6 @@ def getInfoAccount():
             exit()
         else:
             user = dataLTT['data']['user']
-
         return user
 
 print('======================================================')
@@ -203,11 +194,11 @@ else:
 seconds = int(input('Nhập delay : '))
 countNV = int(input('Bạn muốn chạy bao nhiêu nhiệm vụ thì nhận xu : '))
 print('======================================================')
-print('Cách nhập nhiệm vụ chống block (lớn hơn 1 nhỏ hơn 10)')
-print('Khuyến khích nhập từ 2-4 là hợp lý nhất')
-print(f'Nếu nhập 2. Thì sẽ bỏ qua {countNV*2} nhiệm vụ')
-print(f'Nếu nhập 3. Thì sẽ bỏ qua {countNV*3} nhiệm vụ')
-print(f'Nếu nhập 4. Thì sẽ bỏ qua {countNV*4} nhiệm vụ')
+print('Cách nhập nhiệm vụ chống block (lớn hơn 1 nhỏ hơn 10.)')
+print('Khuyến khích nhập từ 2-4 là hợp lý nhất.')
+print(f'Nếu nhập 2. Thì sẽ bỏ qua {countNV*2} nhiệm vụ.')
+print(f'Nếu nhập 3. Thì sẽ bỏ qua {countNV*3} nhiệm vụ.')
+print(f'Nếu nhập 4. Thì sẽ bỏ qua {countNV*4} nhiệm vụ.')
 print('======================================================')
 timeAntiBlock = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
 chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
