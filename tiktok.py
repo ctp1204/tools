@@ -201,9 +201,16 @@ else:
         idtiktok = input('2.1 Nhập id Tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
 seconds = int(input('Nhập delay : '))
+countNV = int(input('Bạn muốn chạy bao nhiêu nhiệm vụ thì nhận xu : '))
+print('======================================================')
+print('Cách nhập nhiệm vụ chống block (lớn hơn 1 nhỏ hơn 10)')
+print('Khuyến khích nhập từ 2-4 là hợp lý nhất')
+print(f'Nếu nhập 2. Thì sẽ bỏ qua {countNV*2} nhiệm vụ')
+print(f'Nếu nhập 3. Thì sẽ bỏ qua {countNV*3} nhiệm vụ')
+print(f'Nếu nhập 4. Thì sẽ bỏ qua {countNV*4} nhiệm vụ')
+print('======================================================')
 timeAntiBlock = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
 chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
-countNV = int(input('Bạn muốn chạy bao nhiêu nhiệm vụ thì nhận xu : '))
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
 # TDS_token = 'TDSQfikjclZXZzJiOiIXZ2V2ciwiIxETMxgmbhhGdpFGZiojIyV2c1Jye'
 # idtiktok = '7170579645727867931'
