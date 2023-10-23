@@ -125,7 +125,8 @@ class OOP:
 
                     self.STT+= 1
                     print('======================================================')
-                    print(f"[{self.STT}] | JOBS : {job_success} | {msg} | TOTAL JOBS: {self.totalJobs} | JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU")
+                    print(f"[{self.STT}] | JOBS SUCCESS : {job_success} | {msg} | TOTAL JOBS: {self.totalJobs}")
+                    print(f"===> JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU <===")
                     print('======================================================')
                 else:
                     print("Nhan xu that bai")
