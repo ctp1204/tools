@@ -38,7 +38,9 @@ class OOP:
             id = dataDCH['data']['id']
             user = dataDCH['data']['uniqueID']
             msg = dataDCH['data']['msg']
-            print(f'Cấu hình thành công: {id} | User: {user}')
+            print('=========================================================')
+            print(f'Đã cấu hình ID: {id} | User: {user}')
+            print('=========================================================')
     def layNhiemVu(self):
         while(True):
             print('Đang lấy jobs, vui lòng chờ !!!', end='\r')
