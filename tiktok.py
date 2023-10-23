@@ -22,7 +22,9 @@ class OOP:
             xu = dataLTT['data']['xu']
             xudie = dataLTT['data']['xudie']
             self.xuHienTai += int(xu)
-            print(f'User : {user} | Xu : {xu} | Xu die : {xudie}')
+            print(f'[*] => Tên tài khoản: {user}')
+            print(f'[*] => Xu hiện tại: {xu}')
+            print(f'[*] => Xu bị phạt: {xudie}')
             print('=========================================================')
 
     def datCauHinh(self):
@@ -36,7 +38,7 @@ class OOP:
             id = dataDCH['data']['id']
             user = dataDCH['data']['uniqueID']
             msg = dataDCH['data']['msg']
-            print(f'{id} | {user} | {msg}')
+            print(f'Cấu hình thành công: {id} | User: {user}')
     def layNhiemVu(self):
         while(True):
             print('Đang lấy jobs, vui lòng chờ !!!', end='\r')
