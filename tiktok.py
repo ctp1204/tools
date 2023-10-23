@@ -78,7 +78,7 @@ class OOP:
                                 continue
                             # if self.demNV == 9:
                             #     self.nhanXu()
-                        
+
                             #     self.demNV = 0
                             #     time.sleep(10)
                             #     continue
@@ -98,7 +98,7 @@ class OOP:
         url = 'https://traodoisub.com/api/coin/?type=TIKTOK_FOLLOW_CACHE&id={0}&access_token={1}'.format(id_value, self.TDS_token)
         response = self.s.get(url)
         dataGNV = response.json()
-        
+
         # for i in range(1, dataGNV['cache'] + 1):
         #     self.demNV += 1
         #     if self.demNV == 9:
@@ -109,7 +109,7 @@ class OOP:
        os.system(f'termux-open-url {link_value}')
        print(f"[{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
     def nhanXu(self):
-     
+
             now = datetime.datetime.now()
             url = 'https://traodoisub.com/api/coin/?type=TIKTOK_FOLLOW&id=TIKTOK_FOLLOW_API&access_token={}'.format(self.TDS_token)
             response = self.s.get(url)
@@ -122,14 +122,16 @@ class OOP:
                     msg = dataNX['data']['msg']
                     self.totalXu += xuthem
                     self.totalJobs += job_success
-                    
+
                     self.STT+= 1
+                    print('======================================================')
                     print(f"[{self.STT}] | JOBS : {job_success} | {msg} | TOTAL JOBS: {self.totalJobs} | JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU")
+                    print('======================================================')
                 else:
                     print("Nhan xu that bai")
             else:
                 print(f"Yêu cầu không thành công. Mã trạng thái: {response.status_code}")
-        
+
     def delay(self, seconds):
         for i in range(seconds, 0, -1):
             print(f'[CTP1204_TOOL] ~> {str(i)} giây', end='\r')
@@ -165,7 +167,7 @@ def getInfoAccount():
             exit()
         else:
             user = dataLTT['data']['user']
-        
+
         return user
             # print(f'User : {user} | Xu : {xu} | Xu die : {xudie}')
 
