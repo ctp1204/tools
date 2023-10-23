@@ -22,10 +22,10 @@ class OOP:
             xu = dataLTT['data']['xu']
             xudie = dataLTT['data']['xudie']
             self.xuHienTai += int(xu)
-            print(f'[*] => Tên tài khoản: {user}')
-            print(f'[*] => Xu hiện tại: {xu}')
-            print(f'[*] => Xu bị phạt: {xudie}')
-            print('=========================================================')
+            print(f'[*] ═> Tên tài khoản: {user}')
+            print(f'[*] ═> Xu hiện tại: {xu}')
+            print(f'[*] ═> Xu bị phạt: {xudie}')
+            print('═════════════════════════════════════════════════════════')
 
     def datCauHinh(self):
         url = 'https://traodoisub.com/api/?fields=tiktok_run&id={0}&access_token={1}'.format(self.idtiktok, self.TDS_token)
@@ -38,9 +38,9 @@ class OOP:
             id = dataDCH['data']['id']
             user = dataDCH['data']['uniqueID']
             msg = dataDCH['data']['msg']
-            print('=========================================================')
+            print('═════════════════════════════════════════════════════════')
             print(f'Đã cấu hình ID: {id} | User: {user}')
-            print('=========================================================')
+            print('═════════════════════════════════════════════════════════')
     def layNhiemVu(self):
         while(True):
             print('Đang lấy jobs, vui lòng chờ !!!', end='\r')
@@ -107,7 +107,7 @@ class OOP:
                     self.totalJobs += job_success
 
                     self.STT+= 1
-                    print('=========================================================')
+                    print('═════════════════════════════════════════════════════════')
                     if (job_success == 0):
                         print('Tài khoản của bạn đã bị nhả jobs hoặc bị chặn Follow.')
                         print('Tool sẽ tự động dừng. Bạn vui lòng đổi nick để chạy lại.')
@@ -115,8 +115,8 @@ class OOP:
                         exit()
                     else:
                         print(f"[{self.STT}] | JOBS SUCCESS : {job_success} | {msg} | TOTAL JOBS: {self.totalJobs}")
-                        print(f"===> JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU <===")
-                    print('=========================================================')
+                        print(f"==═> JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU <===")
+                    print('═════════════════════════════════════════════════════════')
                 else:
                     print("Nhan xu that bai")
             else:
@@ -160,46 +160,55 @@ def getInfoAccount():
             user = dataLTT['data']['user']
         return user
 
-print('=========================================================')
-print('= [*] =>             Tên tool: CTP1204_TOOL             =')
-print('= [*] =>              Admin: Lê Quốc Cường              =')
-print('= [*] =>              Zalo:  0935 53 53 25              =')
-print('= [*] =>             Facebook: Cường TânPhú             =')
-print('= [*] => Mua/bán Xu TDS liên hệ Admin qua Zalo hoặc FB. =')
-print('=========================================================')
-print('========> Admin chúc bạn cày thật nhiều xu !!!! <========')
-print('=========================================================')
+print(r"""
+  ╔═══════════════════════════════════════════════════════╗
+  ║     ███████╗   ████████╗ ██████╗  ██████╗ ██╗         ║
+  ║     ██╔════╝   ╚══██╔══╝██╔═══██╗██╔═══██╗██║         ║
+  ║     ██║     █████╗██║   ██║   ██║██║   ██║██║         ║
+  ║     ██║     ╚════╝██║   ██║   ██║██║   ██║██║         ║
+  ║     ███████║      ██║   ╚██████╔╝╚██████╔╝███████╗    ║
+  ║     ╚══════╝      ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝    ║
+  ║                            @Copyright by Cường TânPhú ║
+  ║  [*] ═> Admin: Lê Quốc Cường                          ║
+  ║  [*] ═> Zalo: 0935 53 53 25                           ║
+  ║  [*] ═> Facebook: https://www.facebook.com/ctp1204    ║
+  ║  [*] ═> Mua/bán Xu TDS liên hệ Admin qua Zalo hoặc FB ║
+  ╚═══════════════════════════════════════════════════════╝
+""")
+print('═════════════════════════════════════════════════════════')
+print('════════> Admin chúc bạn cày thật nhiều xu !!!! <════════')
+print('═════════════════════════════════════════════════════════')
 
 if TDS_token is None or idtiktok is None:
-    TDS_token = input('[*] => Nhập token TDS : ')
-    idtiktok = input('[*] => Nhập id tiktok cần cấu hình : ')
+    TDS_token = input('[*] ═> Nhập token TDS : ')
+    idtiktok = input('[*] ═> Nhập id tiktok cần cấu hình : ')
     save_account_info(TDS_token, idtiktok)
 else:
     user = getInfoAccount()
-    print(f'[*] => Nhập [1] Giữ tài khoản TDS: ({user}).')
-    print(f'[*] => Nhập [2] Đổi Access_Token TDS mới.')
-    keep_old_or_new_token_tds = input(f'[*] => Nhập số : ')
+    print(f'[*] ═> Nhập [1] Giữ tài khoản TDS: ({user}).')
+    print(f'[*] ═> Nhập [2] Đổi Access_Token TDS mới.')
+    keep_old_or_new_token_tds = input(f'[*] ═> Nhập số : ')
     if keep_old_or_new_token_tds.lower() == '2':
-        TDS_token = input('[*] => Nhập Access_Token TDS mới: ')
+        TDS_token = input('[*] ═> Nhập Access_Token TDS mới: ')
 
-    print(f'[*] => Nhập [1] Giữ tài khoản Tiktok: ({idtiktok}).')
-    print(f'[*] => Nhập [2] Đối tài khoản Tiktok mới.')
-    keep_or_new_idtiktok = input(f'[*] => Nhập số : ')
+    print(f'[*] ═> Nhập [1] Giữ tài khoản Tiktok: ({idtiktok}).')
+    print(f'[*] ═> Nhập [2] Đối tài khoản Tiktok mới.')
+    keep_or_new_idtiktok = input(f'[*] ═> Nhập số : ')
     if keep_or_new_idtiktok.lower() == '2':
-        idtiktok = input('[*] => Nhập id tiktok mới: ')
+        idtiktok = input('[*] ═> Nhập id tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
-seconds = int(input('[*] => Nhập delay (s) : '))
-countNV = int(input('[*] => Sau bao nhiêu nhiệm vụ thì nhận xu : '))
-print('=========================================================')
-print('[*] => Nhiệm vụ chống block (lớn hơn 1 nhỏ hơn 10.)')
-print('[*] => Khuyến khích trong khoảng từ 2-5 là hợp lý nhất.')
-print(f'[*] => Nhập [2] hoàn thành {countNV*2} nv dừng chống block.')
-print(f'[*] => Nhập [3] hoàn thành {countNV*3} nv dừng chống block.')
-print(f'[*] => Nhập [4] hoàn thành {countNV*4} nv dừng chống block.')
-print(f'[*] => Nhập [5] hoàn thành {countNV*5} nv dừng chống block.')
-print('=========================================================')
-timeAntiBlock = int(input('[*] => Nhập số : '))
-chongBlock = int(input('[*] => Nhập delay chống block (s) : '))
+seconds = int(input('[*] ═> Nhập delay (s) : '))
+countNV = int(input('[*] ═> Sau bao nhiêu nhiệm vụ thì nhận xu : '))
+print('═════════════════════════════════════════════════════════')
+print('[*] ═> Nhiệm vụ chống block (lớn hơn 1 nhỏ hơn 10.)')
+print('[*] ═> Khuyến khích trong khoảng từ 2-5 là hợp lý nhất.')
+print(f'[*] ═> Nhập [2] hoàn thành {countNV*2} nv dừng chống block.')
+print(f'[*] ═> Nhập [3] hoàn thành {countNV*3} nv dừng chống block.')
+print(f'[*] ═> Nhập [4] hoàn thành {countNV*4} nv dừng chống block.')
+print(f'[*] ═> Nhập [5] hoàn thành {countNV*5} nv dừng chống block.')
+print('═════════════════════════════════════════════════════════')
+timeAntiBlock = int(input('[*] ═> Nhập số : '))
+chongBlock = int(input('[*] ═> Nhập delay chống block (s) : '))
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
 # TDS_token = 'TDSQfikjclZXZzJiOiIXZ2V2ciwiIxETMxgmbhhGdpFGZiojIyV2c1Jye'
 # idtiktok = '7170579645727867931'
