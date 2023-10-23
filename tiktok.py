@@ -63,7 +63,7 @@ class OOP:
                             id_value = item['id']
                             now = datetime.datetime.now()
                             self.guiNhiemVu(id_value)
-                            if (self.STT % timeAntiBlock == 0 and self.demNV == 0):
+                            if (self.STT != 0 and self.STT % timeAntiBlock == 0 and self.demNV == 0):
                                 self.nghiChongBlock(chongBlock)
                             else:
                                 time.sleep(2)
