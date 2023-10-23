@@ -23,7 +23,7 @@ class OOP:
             xudie = dataLTT['data']['xudie']
             self.xuHienTai += int(xu)
             print(f'User : {user} | Xu : {xu} | Xu die : {xudie}')
-            print('======================================================')
+            print('=========================================================')
 
     def datCauHinh(self):
         url = 'https://traodoisub.com/api/?fields=tiktok_run&id={0}&access_token={1}'.format(self.idtiktok, self.TDS_token)
@@ -110,7 +110,7 @@ class OOP:
                     self.totalJobs += job_success
 
                     self.STT+= 1
-                    print('======================================================')
+                    print('=========================================================')
                     if (job_success == 0):
                         print('Tài khoản của bạn đã bị nhả jobs hoặc bị chặn Follow.')
                         print('Tool sẽ tự động dừng. Bạn vui lòng đổi nick để chạy lại.')
@@ -119,7 +119,7 @@ class OOP:
                     else:
                         print(f"[{self.STT}] | JOBS SUCCESS : {job_success} | {msg} | TOTAL JOBS: {self.totalJobs}")
                         print(f"===> JOBS XU: {self.totalXu} XU | TOTAL XU : {xu} XU <===")
-                    print('======================================================')
+                    print('=========================================================')
                 else:
                     print("Nhan xu that bai")
             else:
@@ -163,15 +163,15 @@ def getInfoAccount():
             user = dataLTT['data']['user']
         return user
 
-print('======================================================')
-print('[*] => Tên Tool: CTP1204_TOOL.')
-print('[*] => Admin: Lê Quốc Cường.')
-print('[*] => Zalo: 0935 53 53 25.')
-print('[*] => Facebook: Cường TânPhú.')
-print('[*] => Mua/bán Xu TDS liên hệ Admin qua Zalo hoặc FB.')
-print('======================================================')
-print('=======> Admin chúc bạn cày thật nhiều xu !!! <=======')
-print('======================================================')
+print('=========================================================')
+print('= [*] =>             Tên tool: CTP1204_TOOL             =')
+print('= [*] =>              Admin: Lê Quốc Cường              =')
+print('= [*] =>              Zalo:  0935 53 53 25              =')
+print('= [*] =>             Facebook: Cường TânPhú             =')
+print('= [*] => Mua/bán Xu TDS liên hệ Admin qua Zalo hoặc FB. =')
+print('=========================================================')
+print('========> Admin chúc bạn cày thật nhiều xu !!!! <========')
+print('=========================================================')
 
 if TDS_token is None or idtiktok is None:
     TDS_token = input('Nhập token TDS : ')
@@ -193,14 +193,14 @@ else:
     save_account_info(TDS_token, idtiktok)
 seconds = int(input('Nhập delay (s) : '))
 countNV = int(input('Bạn muốn chạy bao nhiêu nhiệm vụ thì nhận xu : '))
-print('======================================================')
+print('=========================================================')
 print('Cách nhập nhiệm vụ chống block (lớn hơn 1 nhỏ hơn 10.)')
 print('Khuyến khích nhập trong khoảng từ 2-5 là hợp lý nhất.')
 print(f'2. Hoàn thành {countNV*2} nhiệm vụ sẽ dừng chống block.')
 print(f'3. Hoàn thành {countNV*3} nhiệm vụ sẽ dừng chống block.')
 print(f'4. Hoàn thành {countNV*4} nhiệm vụ sẽ dừng chống block.')
 print(f'5. Hoàn thành {countNV*5} nhiệm vụ sẽ dừng chống block.')
-print('======================================================')
+print('=========================================================')
 timeAntiBlock = int(input('Nhập số : '))
 chongBlock = int(input('Bạn muốn thời gian chống block bao nhiêu giây (s) : '))
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
