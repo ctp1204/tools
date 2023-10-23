@@ -164,21 +164,21 @@ def getInfoAccount():
         response = s.get(url)
         dataLTT =  json.loads(response.text)
         if('error' in dataLTT):
-            print('Token tds die !!!')
+            print('Token tds die. Vui lòng xóa đi file tds_token.txt. Và khởi động lại tools !!!')
             exit()
         else:
             user = dataLTT['data']['user']
 
         return user
-            # print(f'User : {user} | Xu : {xu} | Xu die : {xudie}')
-
 
 print('======================================================')
 print('[*] => Tên Tool: CTP1204_TOOL')
-print('[*] => Admin: Cường TânPhú')
+print('[*] => Admin: Lê Quốc Cường')
 print('[*] => Zalo: 0935 53 53 25')
+print('[*] => Facebook: Cường TânPhú')
+print('[*] => Mua/bán Xu TDS liên hệ Admin qua Zalo hoặc FB')
 print('======================================================')
-print('Chúc bạn cày thật nhiều xu !!!')
+print('Admin chúc bạn cày thật nhiều xu !!!')
 print('======================================================')
 
 if TDS_token is None or idtiktok is None:
