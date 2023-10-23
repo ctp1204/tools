@@ -66,7 +66,7 @@ class OOP:
                             if (self.STT != 0 and self.STT % timeAntiBlock == 0 and self.demNV == 0):
                                 self.nghiChongBlock(chongBlock)
                             else:
-                                time.sleep(2)
+                                time.sleep(1)
                             self.demNV += 1
                             self.follow(link_value, now)
                             self.delay(seconds)
@@ -74,7 +74,7 @@ class OOP:
                                 self.nhanXu()
 
                                 self.demNV = 0
-                                time.sleep(10)
+                                time.sleep(5)
                                 continue
                     except Exception:
                         pass
@@ -84,13 +84,6 @@ class OOP:
         url = 'https://traodoisub.com/api/coin/?type=TIKTOK_FOLLOW_CACHE&id={0}&access_token={1}'.format(id_value, self.TDS_token)
         response = self.s.get(url)
         dataGNV = response.json()
-
-        # for i in range(1, dataGNV['cache'] + 1):
-        #     self.demNV += 1
-        #     if self.demNV == 9:
-        #         self.nhanXu()
-        #         self.demNV = 0
-        #         continue
     def follow(self, link_value, now):
        os.system(f'termux-open-url {link_value}')
        print(f"[{self.demNV}] | CTP1204_TOOL | {now.strftime('%H:%M:%S')} | FOLLOW")
