@@ -114,7 +114,7 @@ class OOP:
                     if (job_success == 0):
                         print('Tài khoản của bạn đã bị nhả jobs hoặc bị chặn Follow.')
                         print('Tool sẽ tự động dừng. Bạn vui lòng đổi nick để chạy lại.')
-                        print('Chúc bạn một ngày vui và kiếm thật nhiều XU')
+                        print('Chúc bạn một ngày vui và kiếm thật nhiều xu.')
                         exit()
                     else:
                         print(f"[{self.STT}] | JOBS SUCCESS : {job_success} | {msg} | TOTAL JOBS: {self.totalJobs}")
@@ -164,13 +164,13 @@ def getInfoAccount():
         return user
 
 print('======================================================')
-print('[*] => Tên Tool: CTP1204_TOOL')
-print('[*] => Admin: Lê Quốc Cường')
-print('[*] => Zalo: 0935 53 53 25')
-print('[*] => Facebook: Cường TânPhú')
-print('[*] => Mua/bán Xu TDS liên hệ Admin qua Zalo hoặc FB')
+print('[*] => Tên Tool: CTP1204_TOOL.')
+print('[*] => Admin: Lê Quốc Cường.')
+print('[*] => Zalo: 0935 53 53 25.')
+print('[*] => Facebook: Cường TânPhú.')
+print('[*] => Mua/bán Xu TDS liên hệ Admin qua Zalo hoặc FB.')
 print('======================================================')
-print('Admin chúc bạn cày thật nhiều xu !!!')
+print('=======> Admin chúc bạn cày thật nhiều xu !!! <=======')
 print('======================================================')
 
 if TDS_token is None or idtiktok is None:
@@ -189,19 +189,20 @@ else:
     print(f'2. Bạn có muôn đối tài khoản Tiktok mới không ?')
     keep_or_new_idtiktok = input(f'Nhập số : ')
     if keep_or_new_idtiktok.lower() == '2':
-        idtiktok = input('2.1 Nhập id Tiktok mới: ')
+        idtiktok = input('2.1 Nhập id tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
-seconds = int(input('Nhập delay : '))
+seconds = int(input('Nhập delay (s) : '))
 countNV = int(input('Bạn muốn chạy bao nhiêu nhiệm vụ thì nhận xu : '))
 print('======================================================')
 print('Cách nhập nhiệm vụ chống block (lớn hơn 1 nhỏ hơn 10.)')
-print('Khuyến khích nhập từ 2-4 là hợp lý nhất.')
-print(f'Nếu nhập 2. Thì sẽ bỏ qua {countNV*2} nhiệm vụ.')
-print(f'Nếu nhập 3. Thì sẽ bỏ qua {countNV*3} nhiệm vụ.')
-print(f'Nếu nhập 4. Thì sẽ bỏ qua {countNV*4} nhiệm vụ.')
+print('Khuyến khích nhập trong khoảng từ 2-5 là hợp lý nhất.')
+print(f'2. Hoàn thành {countNV*2} nhiệm vụ sẽ dừng chống block.')
+print(f'3. Hoàn thành {countNV*3} nhiệm vụ sẽ dừng chống block.')
+print(f'4. Hoàn thành {countNV*4} nhiệm vụ sẽ dừng chống block.')
+print(f'5. Hoàn thành {countNV*5} nhiệm vụ sẽ dừng chống block.')
 print('======================================================')
-timeAntiBlock = int(input('Sau bao nhiêu nhiệm vụ thì nghỉ chống block : '))
-chongBlock = int(input('Nghỉ chống block bao nhiêu giây : '))
+timeAntiBlock = int(input('Nhập số : '))
+chongBlock = int(input('Bạn muốn thời gian chống block bao nhiêu giây (s) : '))
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
 # TDS_token = 'TDSQfikjclZXZzJiOiIXZ2V2ciwiIxETMxgmbhhGdpFGZiojIyV2c1Jye'
 # idtiktok = '7170579645727867931'
