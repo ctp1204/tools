@@ -90,7 +90,7 @@ class OOP:
         dataGNV = response.json()
     def follow(self, link_value, now):
        os.system(f'termux-open-url {link_value}')
-       print(f"[{self.demNV}] | Ｃ●ＴＯＯＬ | {now.strftime('%H:%M:%S')} | ＦＯＬＬＯＷ")
+       print(f"[{self.demNV}] | Ｃ━ＴＯＯＬ | {now.strftime('%H:%M:%S')} | ＦＯＬＬＯＷ")
     def nhanXu(self):
 
             now = datetime.datetime.now()
@@ -124,7 +124,7 @@ class OOP:
 
     def delay(self, seconds):
         for i in range(seconds, 0, -1):
-            print(f'Ｃ●ＴＯＯＬ ~> {str(i)} giây', end='\r')
+            print(f'Ｃ━ＴＯＯＬ ~> {str(i)} giây', end='\r')
             time.sleep(1)
     def nghiChongBlock(self, chongBlock):
         for i in range(chongBlock, 0, -1):
