@@ -22,9 +22,9 @@ class OOP:
             xu = dataLTT['data']['xu']
             xudie = dataLTT['data']['xudie']
             self.xuHienTai += int(xu)
-            print(f'[♠] ═> Tên tài khoản: {user}')
-            print(f'[♠] ═> Xu hiện tại: {xu}')
-            print(f'[♠] ═> Xu bị phạt: {xudie}')
+            print(f'[*] ═> Tên tài khoản: {user}')
+            print(f'[*] ═> Xu hiện tại: {xu}')
+            print(f'[*] ═> Xu bị phạt: {xudie}')
             print('═════════════════════════════════════════════════════════')
 
     def datCauHinh(self):
@@ -169,10 +169,10 @@ print(r"""
 ║     ███████╗      ██║   ╚██████╔╝╚██████╔╝███████╗    ║
 ║     ╚══════╝      ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝    ║
 ║                  @Copyright: Cường TânPhú ║ Ver: 1.3  ║
-║ [♠] ═> Admin: Lê Quốc Cường                           ║
-║ [♠] ═> Zalo: 0935 53 53 25                            ║
-║ [♠] ═> Facebook: https://www.facebook.com/ctp1204     ║
-║ [♠] ═> Mua/bán Xu TDS liên hệ Admin qua Zalo hoặc FB  ║
+║ [*] ═> Admin: Lê Quốc Cường                           ║
+║ [*] ═> Zalo: 0935 53 53 25                            ║
+║ [*] ═> Facebook: https://www.facebook.com/ctp1204     ║
+║ [*] ═> Mua/bán Xu TDS liên hệ Admin qua Zalo hoặc FB  ║
 ╚═══════════════════════════════════════════════════════╝
 """)
 print('═════════════════════════════════════════════════════════')
@@ -180,35 +180,35 @@ print('════════> Admin chúc bạn cày thật nhiều xu !!!! <
 print('═════════════════════════════════════════════════════════')
 
 if TDS_token is None or idtiktok is None:
-    TDS_token = input('[♠] ═> Nhập token TDS : ')
-    idtiktok = input('[♠] ═> Nhập id tiktok cần cấu hình : ')
+    TDS_token = input('[*] ═> Nhập token TDS : ')
+    idtiktok = input('[*] ═> Nhập id tiktok cần cấu hình : ')
     save_account_info(TDS_token, idtiktok)
 else:
     user = getInfoAccount()
-    print(f'[♠] ═> Nhập [1] Giữ tài khoản TDS: ({user}).')
-    print(f'[♠] ═> Nhập [2] Đổi Access_Token TDS mới.')
-    keep_old_or_new_token_tds = input(f'[♠] ═> Nhập số : ')
+    print(f'[*] ═> Nhập [1] Giữ tài khoản TDS: ({user}).')
+    print(f'[*] ═> Nhập [2] Đổi Access_Token TDS mới.')
+    keep_old_or_new_token_tds = input(f'[*] ═> Nhập số : ')
     if keep_old_or_new_token_tds.lower() == '2':
-        TDS_token = input('[♠] ═> Nhập Access_Token TDS mới: ')
+        TDS_token = input('[*] ═> Nhập Access_Token TDS mới: ')
 
-    print(f'[♠] ═> Nhập [1] Giữ tài khoản Tiktok: ({idtiktok}).')
-    print(f'[♠] ═> Nhập [2] Đối tài khoản Tiktok mới.')
-    keep_or_new_idtiktok = input(f'[♠] ═> Nhập số : ')
+    print(f'[*] ═> Nhập [1] Giữ tài khoản Tiktok: ({idtiktok}).')
+    print(f'[*] ═> Nhập [2] Đối tài khoản Tiktok mới.')
+    keep_or_new_idtiktok = input(f'[*] ═> Nhập số : ')
     if keep_or_new_idtiktok.lower() == '2':
-        idtiktok = input('[♠] ═> Nhập id tiktok mới: ')
+        idtiktok = input('[*] ═> Nhập id tiktok mới: ')
     save_account_info(TDS_token, idtiktok)
-seconds = int(input('[♠] ═> Nhập delay (s) : '))
-countNV = int(input('[♠] ═> Sau bao nhiêu nhiệm vụ thì nhận xu : '))
+seconds = int(input('[*] ═> Nhập delay (s) : '))
+countNV = int(input('[*] ═> Sau bao nhiêu nhiệm vụ thì nhận xu : '))
 print('═════════════════════════════════════════════════════════')
-print('[♠] ═> Nhiệm vụ chống block (lớn hơn 1 nhỏ hơn 10.)')
-print('[♠] ═> Khuyến khích trong khoảng từ 2-5 là hợp lý nhất.')
-print(f'[♠] ═> Nhập [2] hoàn thành {countNV*2} nhiệm vụ dừng chống block.')
-print(f'[♠] ═> Nhập [3] hoàn thành {countNV*3} nhiệm vụ dừng chống block.')
-print(f'[♠] ═> Nhập [4] hoàn thành {countNV*4} nhiệm vụ dừng chống block.')
-print(f'[♠] ═> Nhập [5] hoàn thành {countNV*5} nhiệm vụ dừng chống block.')
+print('[*] ═> Nhiệm vụ chống block (lớn hơn 1 nhỏ hơn 10.)')
+print('[*] ═> Khuyến khích trong khoảng từ 2-5 là hợp lý nhất.')
+print(f'[*] ═> Nhập [2] hoàn thành {countNV*2} nhiệm vụ dừng chống block.')
+print(f'[*] ═> Nhập [3] hoàn thành {countNV*3} nhiệm vụ dừng chống block.')
+print(f'[*] ═> Nhập [4] hoàn thành {countNV*4} nhiệm vụ dừng chống block.')
+print(f'[*] ═> Nhập [5] hoàn thành {countNV*5} nhiệm vụ dừng chống block.')
 print('═════════════════════════════════════════════════════════')
-timeAntiBlock = int(input('[♠] ═> Nhập số : '))
-chongBlock = int(input('[♠] ═> Nhập delay chống block (s) : '))
+timeAntiBlock = int(input('[*] ═> Nhập số : '))
+chongBlock = int(input('[*] ═> Nhập delay chống block (s) : '))
 # os.system('termux-open-url https:\/\/tiktok.com\/@nguyenngocquang004')
 # TDS_token = 'TDSQfikjclZXZzJiOiIXZ2V2ciwiIxETMxgmbhhGdpFGZiojIyV2c1Jye'
 # idtiktok = '7170579645727867931'
